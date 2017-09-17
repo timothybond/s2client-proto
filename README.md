@@ -40,6 +40,9 @@ The API is available in the retail Windows and Mac clients. There are also Linux
 * **CommandCenter**
    * A robust architecture for quickly developing Starcraft AI bots.
    * [Repository](https://github.com/davechurchill/CommandCenter)
+* **s2client-dotnet**
+   * .NET "Standard" 2.0 port of the StarCraft II API Reference implementation.
+   * [Repository](https://github.com/matthid/s2client-dotnet)
 
 # Downloads
 
@@ -64,6 +67,7 @@ The files are password protected with the password 'iagreetotheeula'.
 ## Replay Packs
 
 * [3.16.1 - Pack 1](http://blzdistsc2-a.akamaihd.net/ReplayPacks/3.16.1-Pack_1-fix.zip)
+* [3.16.1 - Pack 2](http://blzdistsc2-a.akamaihd.net/ReplayPacks/3.16.1-Pack_2.zip)
 
 # Installing Map and Replay Packs
 
