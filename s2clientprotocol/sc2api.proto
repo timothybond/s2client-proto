@@ -367,7 +367,7 @@ message RequestData {
   bool unit_type_id = 2;
   bool upgrade_id = 3;
   bool buff_id = 4;
-  optional bool effect_id = 5;
+  bool effect_id = 5;
 }
 
 message ResponseData {
