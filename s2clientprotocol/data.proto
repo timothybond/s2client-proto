@@ -73,22 +73,22 @@ message Weapon {
 }
 
 message UnitTypeData {
-  uint32 unit_id = 1;                                    // Stable ID.
-  string name = 2;                                       // Catalog name of the unit.
-  bool available = 3;                                    // If true, the ability may be used by this set of mods/map.
-  uint32 cargo_size = 4;                                 // Number of cargo slots it occupies in transports.
-  uint32 mineral_cost = 12;
-  uint32 vespene_cost = 13;
-  float food_required = 14;
-  float food_provided = 18;
-  uint32 ability_id = 15;                                // This is the ability the builds the unit
-  Race race = 16;
-  float build_time = 17;
-  bool has_vespene = 19;
-  bool has_minerals = 20;
+  optional uint32 unit_id = 1;                                    // Stable ID.
+  optional string name = 2;                                       // Catalog name of the unit.
+  optional bool available = 3;                                    // If true, the ability may be used by this set of mods/map.
+  optional uint32 cargo_size = 4;                                 // Number of cargo slots it occupies in transports.
+  optional uint32 mineral_cost = 12;
+  optional uint32 vespene_cost = 13;
+  optional float food_required = 14;
+  optional float food_provided = 18;
+  optional uint32 ability_id = 15;                                // The ability that builds this unit.
+  optional Race race = 16;
+  optional float build_time = 17;
+  optional bool has_vespene = 19;
+  optional bool has_minerals = 20;
 
-  repeated uint32 tech_alias = 21;                                // Units this is equivalent to in terms of satisfying tech requirement.
-  uint32 unit_alias = 22;                                // Units that are morphed variants of the same unit.
+  repeated uint32 tech_alias = 21;                                // Other units that satisfy the same tech requirement.
+  optional uint32 unit_alias = 22;                                // The morphed variant of this unit.
 
   uint32 tech_requirement = 23;                          // Structure required to build this unit. (Or any with the same tech_alias)
   bool require_attached = 24;                            // Whether tech_requirement is an add-on.
@@ -112,4 +112,11 @@ message UpgradeData {
 message BuffData {
   uint32 buff_id = 1;          // Stable ID.
   string name = 2;
+}
+
+message EffectData {
+  optional uint32 effect_id = 1;          // Stable ID.
+  optional string name = 2;
+  optional string friendly_name = 3;
+  optional float radius = 4;
 }

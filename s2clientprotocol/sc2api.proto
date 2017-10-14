@@ -367,6 +367,7 @@ message RequestData {
   bool unit_type_id = 2;
   bool upgrade_id = 3;
   bool buff_id = 4;
+  optional bool effect_id = 5;
 }
 
 message ResponseData {
@@ -374,6 +375,7 @@ message ResponseData {
   repeated UnitTypeData units = 2;
   repeated UpgradeData upgrades = 3;
   repeated BuffData buffs = 4;
+  repeated EffectData effects = 5;
 }
 
 //-----------------------------------------------------------------------------

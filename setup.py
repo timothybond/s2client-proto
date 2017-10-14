@@ -13,6 +13,8 @@ from distutils.spawn import find_executable
 from setuptools import setup
 from setuptools.command.build_py import build_py
 
+import gameversion_autogen as ver
+
 SETUP_DIR = os.path.dirname(os.path.abspath(__file__))
 PROTO_DIR = os.path.join(SETUP_DIR, 's2clientprotocol')
 
@@ -59,11 +61,12 @@ class BuildPy(build_py):
 
 setup(
     name='s2clientprotocol',
-    version='1.0',
+    version='3.19.1.58600.0',
     description='StarCraft II - client protocol.',
-    author='Blizzard',
+    author='Blizzard Entertainment',
     author_email='jrepp@blizzard.com',
     license='MIT',
+    url='https://github.com/Blizzard/s2client-proto',
     packages=[
         's2clientprotocol',
     ],
@@ -73,4 +76,20 @@ setup(
     cmdclass={
         'build_py': BuildPy,
     },
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'Environment :: Console',
+        'Intended Audience :: End Users/Desktop',
+        'Intended Audience :: Developers',
+        'Intended Audience :: Science/Research',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: POSIX',
+        'Operating System :: Microsoft :: Windows',
+        'Operating System :: MacOS :: MacOS X',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.4',
+        'Topic :: Games/Entertainment :: Real Time Strategy',
+        'Topic :: Software Development :: Libraries',
+    ],
 )

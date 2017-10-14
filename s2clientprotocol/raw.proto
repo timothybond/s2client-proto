@@ -28,6 +28,7 @@ message ObservationRaw {
   repeated Unit units = 2;
   MapState map_state = 3;                // Fog of war, creep and so on. Board stuff that changes per frame.
   Event event = 4;
+  repeated Effect effects = 5;
 }
 
 message PowerSource {
@@ -74,12 +75,14 @@ enum CloakState {
 }
 
 message PassengerUnit {
-  uint64 tag = 1;
-  float health = 2;
-  float health_max = 3;
-  float shield = 4;
-  float energy = 5;
-  uint32 unit_type = 6;
+  optional uint64 tag = 1;
+  optional float health = 2;
+  optional float health_max = 3;
+  optional float shield = 4;
+  optional float shield_max = 7;
+  optional float energy = 5;
+  optional float energy_max = 8;
+  optional uint32 unit_type = 6;
 }
 
 message Unit {
@@ -106,14 +109,16 @@ message Unit {
   bool is_powered = 35;
 
   // Not populated for snapshots
-  float health = 14;
-  float health_max = 15;
-  float shield = 16;
-  float energy = 17;
-  int32 mineral_contents = 18;
-  int32 vespene_contents = 19;
-  bool is_flying = 20;
-  bool is_burrowed = 21;
+  optional float health = 14;
+  optional float health_max = 15;
+  optional float shield = 16;
+  optional float shield_max = 36;
+  optional float energy = 17;
+  optional float energy_max = 37;
+  optional int32 mineral_contents = 18;
+  optional int32 vespene_contents = 19;
+  optional bool is_flying = 20;
+  optional bool is_burrowed = 21;
 
   // Not populated for enemies
   repeated UnitOrder orders = 22;
@@ -131,6 +136,15 @@ message Unit {
 message MapState {
   ImageData visibility = 1;            // 1 byte visibility layer.
   ImageData creep = 2;                 // 1 byte creep layer.
+}
+
+message Event {
+  repeated uint64 dead_units = 1;
+}
+
+message Effect {
+  optional uint32 effect_id = 1;
+  repeated Point2D pos = 2;                     // Effect may impact multiple locations. (eg. Lurker attack)
 }
 
 
@@ -163,8 +177,4 @@ message ActionRawCameraMove {
 message ActionRawToggleAutocast {
   int32 ability_id = 1;
   repeated uint64 unit_tags = 2;
-}
-
-message Event {
-  repeated uint64 dead_units = 1;
 }
