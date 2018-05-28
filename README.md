@@ -35,14 +35,24 @@ The API is available in the retail Windows and Mac clients. There are also Linux
 ## Community
 
 * **PySC2**
-   * DeepMind's python environment wrapper. 
-   * [Repository](https://github.com/deepmind/pysc2)
+  * DeepMind's python environment wrapper. 
+  * [Repository](https://github.com/deepmind/pysc2)
 * **CommandCenter**
-   * A robust architecture for quickly developing Starcraft AI bots.
-   * [Repository](https://github.com/davechurchill/CommandCenter)
-* **s2client-dotnet**
-   * .NET "Standard" 2.0 port of the StarCraft II API Reference implementation.
-   * [Repository](https://github.com/matthid/s2client-dotnet)
+  * A robust architecture for quickly developing Starcraft AI bots.
+  * [Repository](https://github.com/davechurchill/CommandCenter)
+* **Bot Ladder**
+  * Unofficial community organized ladder.
+  * [Website](http://sc2ai.net/)
+* **Community Wiki**
+  * Unofficial wiki of documentation and tutorials.
+  * [Website](http://wiki.sc2ai.net/Main_Page)
+* **Discord Server**
+  * Unofficial server for discussing AI questions and projects.
+  * [Invite Link](https://discord.gg/qTZ65sh)
+* **Facebook Group**
+  * Unofficial community page.
+  * [Website](https://www.facebook.com/groups/969196249883813/)
+
 
 # Downloads
 
@@ -56,13 +66,21 @@ The files are password protected with the password 'iagreetotheeula'.
 
 * [3.17](http://blzdistsc2-a.akamaihd.net/Linux/SC2.3.17.zip)
 * [3.16.1](http://blzdistsc2-a.akamaihd.net/Linux/SC2.3.16.1.zip)
+* [4.0.2](http://blzdistsc2-a.akamaihd.net/Linux/SC2.4.0.2.zip)
+* [4.1.2](http://blzdistsc2-a.akamaihd.net/Linux/SC2.4.1.2.60604_2018_05_16.zip)
 
 ## Map Packs
 
+We added a map that was missing from the Ladder 2017 Season 3 Map Pack.
 * [Ladder 2017 Season 1](http://blzdistsc2-a.akamaihd.net/MapPacks/Ladder2017Season1.zip)
 * [Ladder 2017 Season 2](http://blzdistsc2-a.akamaihd.net/MapPacks/Ladder2017Season2.zip)
-* [Ladder 2017 Season 3](http://blzdistsc2-a.akamaihd.net/MapPacks/Ladder2017Season3.zip)
+* [Ladder 2017 Season 3 Updated](http://blzdistsc2-a.akamaihd.net/MapPacks/Ladder2017Season3_Updated.zip)
+* [Ladder 2017 Season 4](http://blzdistsc2-a.akamaihd.net/MapPacks/Ladder2017Season4.zip)
+* [Ladder 2018 Season 1](http://blzdistsc2-a.akamaihd.net/MapPacks/Ladder2018Season1.zip)
 * [Melee](http://blzdistsc2-a.akamaihd.net/MapPacks/Melee.zip)
+
+This is the previous version of the Ladder 2017 Season 3 Map Pack
+* [Ladder 2017 Season 3 Original](http://blzdistsc2-a.akamaihd.net/MapPacks/Ladder2017Season3.zip)
 
 ## Replay Packs
 
