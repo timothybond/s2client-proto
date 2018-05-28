@@ -270,8 +270,8 @@ message RequestStartReplay {
   int32 observed_player_id = 2;
   InterfaceOptions options = 3;
 
-  optional bool disable_fog = 4;
-  optional bool realtime = 7;
+  bool disable_fog = 4;
+  bool realtime = 7;
 }
 
 message ResponseStartReplay {
@@ -346,8 +346,8 @@ message ResponseObservation {
 }
 
 message ChatReceived {
-  optional uint32 player_id = 1;
-  optional string message = 2;
+  uint32 player_id = 1;
+  string message = 2;
 }
 
 //-----------------------------------------------------------------------------
@@ -577,11 +577,11 @@ message Observation {
 }
 
 message Action {
-  optional ActionRaw action_raw = 1;                        // Populated if Raw interface is enabled.
-  optional ActionSpatial action_feature_layer = 2;          // Populated if Feature Layer interface is enabled.
-  optional ActionSpatial action_render = 3;                 // Not implemented. Populated if Render interface is enabled.
-  optional ActionUI action_ui = 4;                          // Populated if Feature Layer or Render interface is enabled.
-  optional ActionChat action_chat = 6;                      // Chat messages as a player typing into the chat channel.
+  ActionRaw action_raw = 1;                        // Populated if Raw interface is enabled.
+  ActionSpatial action_feature_layer = 2;          // Populated if Feature Layer interface is enabled.
+  ActionSpatial action_render = 3;                 // Not implemented. Populated if Render interface is enabled.
+  ActionUI action_ui = 4;                          // Populated if Feature Layer or Render interface is enabled.
+  ActionChat action_chat = 6;                      // Chat messages as a player typing into the chat channel.
 }
 
 message ActionChat {
@@ -610,19 +610,19 @@ message ObserverAction {
 }
 
 message ActionObserverPlayerPerspective {
-  optional uint32 player_id = 1;        // 0 to observe "Everyone"
+  uint32 player_id = 1;        // 0 to observe "Everyone"
 }
 
 message ActionObserverCameraMove {
-  optional Point2D world_pos = 1;
+  Point2D world_pos = 1;
 
   // Distance between camera and terrain. Larger value zooms out camera.
   // Defaults to standard camera distance if set to 0.
-  optional float distance = 2;
+  float distance = 2;
 }
 
 message ActionObserverCameraFollowPlayer {
-  optional uint32 player_id = 1;        // Not implemented. Value must be [1, 15]
+  uint32 player_id = 1;        // Not implemented. Value must be [1, 15]
 }
 
 message ActionObserverCameraFollowUnits {
